@@ -1,0 +1,42 @@
+[
+  {
+    "applicant_id": "APP-1001",
+    "applicant_name": "Applicant 1001",
+    "ssn": "TEST-SSN-1001",
+    "loan_amount": 360000,
+    "property_value": 400000,
+    "monthly_gross_income": 4500
+  },
+  {
+    "applicant_id": "APP-1002",
+    "applicant_name": "Applicant 1002",
+    "ssn": "TEST-SSN-1002",
+    "loan_amount": 410000,
+    "property_value": 405000,
+    "monthly_gross_income": 5200
+  },
+  {
+    "applicant_id": "APP-1003",
+    "applicant_name": "Applicant 1003",
+    "ssn": "TEST-SSN-1003",
+    "loan_amount": 275000,
+    "property_value": 300000,
+    "monthly_gross_income": 6100
+  },
+  {
+    "applicant_id": "APP-1004",
+    "applicant_name": "Applicant 1004",
+    "ssn": "TEST-SSN-1004",
+    "loan_amount": 330000,
+    "property_value": 310000,
+    "monthly_gross_income": 5000
+  },
+  {
+    "applicant_id": "APP-1005",
+    "applicant_name": "Applicant 1005",
+    "ssn": "TEST-SSN-1005",
+    "loan_amount": 460000,
+    "property_value": 400000,
+    "monthly_gross_income": 4200
+  }
+]

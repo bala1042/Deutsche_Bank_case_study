@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: MORTGAGE_LENDING
+    schema: BRONZE
+    tables:
+      - name: mortgage_applications
+      - name: credit_bureau
+
+models:
+  - name: bronze_applications
+    description: Raw mortgage applications loaded from the source JSON feed.
+    columns:
+      - name: applicant_id
+        tests:
+          - unique
+          - not_null
+
+  - name: bronze_credit_bureau
+    description: Raw credit bureau data loaded into the Bronze landing table.
+    columns:
+      - name: applicant_id
+        tests:
+          - unique
+          - not_null
+
+  - name: silver_master_applications
+    description: Cleaned and joined mortgage application + bureau data with masked PII.
+    columns:
+      - name: applicant_id
+        tests:
+          - unique
+          - not_null
+      - name: ssn
+        tests:
+          - not_null
+
+  - name: technical_rejections
+    description: Applications rejected during technical validation due to critical missing fields.
+
+  - name: gold_decision_log
+    description: Final underwriting decisions with reason codes for compliance and BI.
