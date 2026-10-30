@@ -116,11 +116,13 @@ The design scales horizontally by partitioning raw data landing into Snowflake s
    `pip install -r requirements.txt`
 2. Generate sample input data:
    `python scripts/generate_sample_data.py`
-3. Run unit tests:
+3. Print underwriting decisions for the sample applications:
+   `python scripts/show_sample_decisions.py`
+4. Run unit tests:
    `pytest tests/test_underwriting_logic.py`
-4. dbt project configuration:
+5. dbt project configuration:
    - set `DBT_SNOWFLAKE_ACCOUNT`, `DBT_SNOWFLAKE_USER`, `DBT_SNOWFLAKE_PASSWORD`, and optionally `DBT_SNOWFLAKE_ROLE` in the environment. The dbt profile reads credentials from environment variables.
-5. Terraform:
+6. Terraform:
    - provide `snowflake_account`, `snowflake_username`, and `snowflake_password` through Terraform variables or `TF_VAR_*` environment variables; do not commit credentials.
    - run `terraform init` and `terraform plan`
 
